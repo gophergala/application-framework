@@ -12,6 +12,8 @@ Basically, application is a puzzle of modules linked after a rule to give a spee
 Note that included modules do not some useful things but show some techniques to write
 real things and interact with framework and other modules.
 
+![6](https://cloud.githubusercontent.com/assets/6298396/5887450/08adb0b2-a3da-11e4-8353-0f34e01808a9.png)
+
 [![last-version-blue](https://cloud.githubusercontent.com/assets/6298396/5602522/8967405e-935b-11e4-8777-de3623ed6ad7.png)] (https://github.com/gophergala/application-framework/archive/master.zip)
 
 **Using**
@@ -95,7 +97,7 @@ Minimal modules list (but compile even are removed too):
 For demo puposes i put some simple modules:
 - mod_checkUser show forms using,search a user in database
 - mod_showPersons show some persons informations from a database
-- mod addPerson add a person into a database and call showPerson module
+- mod_addPerson add a person into a database and call showPerson module
 - mod_ajax show integration of a simple ajax module who show a clock
 
 **Enjoy!**
