@@ -49,7 +49,7 @@ This is also module that works with forms.
 
 	//finally show the page
 	p := Page{
-		Title:  "Check user page",
+		Title:  "Add person page",
 		Status: c.Value,
 		Body:   template.HTML(b),
 	}
