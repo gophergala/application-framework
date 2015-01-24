@@ -7,6 +7,9 @@ Useful when we have or write many applications and we want to concentrate all of
 
 Modularity is based on some go specific caracteristics and modules are plugable at compile time.
 
+[![last-version-blue](https://cloud.githubusercontent.com/assets/6298396/5602522/8967405e-935b-11e4-8777-de3623ed6ad7.png)] (https://github.com/gophergala/application-framework/archive/master.zip)
+
+
 **Description:**
 
 Everithing but main.go is a module and have the same structure. You can remove any of mod_*.go file and program compile and run flawless (wow!). You can also add module as you wish. For example if you wish another autenticate module replace only this module.
@@ -19,11 +22,12 @@ Database used is sqlite (see github.com/mattn/go-sqlite3)
 **Using:**
 
 Compile program. Se here (https://golang.org/doc/code.html) how.
-Run and open http://localhost:8080 in your favorite browser.default user is george without password.
 
-Back button is disabled in browser so is nice to run with Google Chrome in app mode
+Run and open http://localhost:8080 in your favorite browser (default user is george without password).
 
-google-chrome --app=http://localhost:8080
+Back button is disabled in browser and is nice to run with Google Chrome in app mode
+
+         google-chrome --app=http://localhost:8080
 
 **Tools used in this project:**
 
@@ -34,14 +38,12 @@ google-chrome --app=http://localhost:8080
 **How it works:**
 
 We can define this application thus:
-    * an autentication mecanism
-    * modules link mecanism
-    * collection of modules
+   * an autentication mecanism
+   * modules link mecanism
+   * collection of modules
 
 Basicaly, you have a module template and a tehnique to plugin or plugout into
 main application.
-
-Module structure:
 
 init() function make go module plugable. here we put module web handler
 
@@ -70,9 +72,10 @@ next we must define handler
          }
 
 as you see structure are fixed
-    * cookie checker
-    * build page content in b variable
-    * how page with go template
+
+   * cookie checker
+   * build page content in b variable
+   * how page with go template
 
 Note that a simple cookie mecanism are used to implement sessions in modules.
 Also, module has access to a global logfile with
@@ -81,9 +84,9 @@ Also, module has access to a global logfile with
 
 Thats all folks about modules. Now, adding a menu line in templates/index.html file like
 
-         <a href="/testPage" >Dummy page</a> 
+         <a href="/ModuleName" >ModuleName</a> 
 
-make visible testPage module to application. Remove this line and coresponding module,recompile application and module are removed. Nothing else to do.
+make visible ModuleName to application. Remove this line and coresponding module,recompile application and module are removed. Nothing else to do.
 
 Easy copy/paste module or easy modify old modules to do new modules give a speed in developing applications.
 
