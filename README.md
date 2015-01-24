@@ -1,5 +1,5 @@
 ##Application Framework
-====
+
 This project is a full modular web application framework.
 Useful when we have or write many applications and we want to concentrate all of them into single application with autentication.
 
@@ -25,7 +25,7 @@ Back button is disabled in browser and is nice to run with Google Chrome in app 
 
    * compiler http://golang.org
    * ide      https://github.com/visualfc/liteide
-   * gopei    https://golang.org/geosoft1/tools for faster development
+   * gopei shell    https://golang.org/geosoft1/tools for faster development
 
 **How it works**
 
