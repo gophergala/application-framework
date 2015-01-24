@@ -2,6 +2,7 @@ package main
 
 import (
 	"html/template"
+	"log"
 	"net/http"
 )
 
@@ -19,6 +20,7 @@ func indexPage(w http.ResponseWriter, r *http.Request) {
 			cookie := http.Cookie{Name: "session", MaxAge: -1}
 			http.SetCookie(w, &cookie)
 			http.Redirect(w, r, "/", http.StatusFound)
+			log.Println(c.Value + " logout")
 			return
 		}
 	}

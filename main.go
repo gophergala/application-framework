@@ -4,12 +4,18 @@ import (
 	"database/sql"
 	_ "github.com/mattn/go-sqlite3"
 	"html/template"
+	"log"
 	"net/http"
 	"os"
 )
 
+//global variable to access template from modules
 var t *template.Template
 
+//standard framework page format
+// page title
+// status field, can keep loged user or other informations
+// body is generate from modules
 type Page struct {
 	Title, Status string
 	Body          template.HTML
@@ -35,6 +41,17 @@ func main() {
 	//delete from foo;
 	`)
 	db.Close()
+
+	//set a log file for apllication
+	//	use log.Println("message") in module to log actions
+	f, err := os.OpenFile("logfile.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	if err != nil {
+		println("cannot open logfile")
+	}
+	defer f.Close()
+
+	log.SetOutput(f)
+	log.Println("app started")
 
 	http.ListenAndServe(":8080", nil)
 }
