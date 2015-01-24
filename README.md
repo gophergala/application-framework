@@ -37,19 +37,14 @@ Back button is disabled in browser and is nice to run with Google Chrome in app 
 
 **How it works:**
 
-We can define this application thus:
-   * an autentication mecanism
-   * modules link mecanism
-   * collection of modules
-
 Basicaly, you have a module template and a tehnique to plugin or plugout into
 main application.
 
-init() function make go module plugable. here we put module web handler
+init() function make go module plugable. Here we put only the web handler
 
          http.HandleFunc("/ModuleName", ModuleName)
 	
-next we must define handler
+handler structure
 
          func ModuleName(w http.ResponseWriter, r *http.Request) {
          	//this must add at begin of every session code
@@ -77,12 +72,12 @@ as you see structure are fixed
    * build page content in b variable
    * how page with go template
 
-Note that a simple cookie mecanism are used to implement sessions in modules.
+Note that a simple cookie mecanism are used to implement sessions in modules (see [mod_login.go](https://github.com/gophergala/application-framework/blob/master/mod_login.go)).
 Also, module has access to a global logfile with
 
          log.Println("message")
 
-Thats all folks about modules. Now, adding a menu line in templates/index.html file like
+Thats all folks about modules. Now, adding a menu line in [templates/index.html](https://github.com/gophergala/application-framework/blob/master/templates/index.html) file like
 
          <a href="/ModuleName" >ModuleName</a> 
 
