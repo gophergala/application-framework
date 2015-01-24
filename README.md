@@ -9,7 +9,7 @@ Everithing but main.go is a module and have the same structure. You can add or r
 
 Basically, application is a puzzle of modules linked after a rule to give a speed in developing applications.
 
-Note that included modules do not some usefull things but show some tehniques to write
+Note that included modules do not some useful things but show some techniques to write
 real things and interact with framework and other modules.
 
 [![last-version-blue](https://cloud.githubusercontent.com/assets/6298396/5602522/8967405e-935b-11e4-8777-de3623ed6ad7.png)] (https://github.com/gophergala/application-framework/archive/master.zip)
@@ -96,4 +96,4 @@ For demo puposes i put some simple modules:
 - mod addPerson add a person into a database and call showPerson module
 - mod_ajax show integration of a simple ajax module who show a clock
 
-** Enjoy! **
+**Enjoy!**
