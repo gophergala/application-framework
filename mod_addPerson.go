@@ -22,12 +22,13 @@ func addPerson(w http.ResponseWriter, r *http.Request) {
 		db, _ := sql.Open("sqlite3", "./foo.db")
 		defer db.Close()
 
+		//use HTML5 browser to have automatic form fields validation :)
 		q := `insert into person (name,age,address) values ("`
 		q += r.FormValue("name") + `",`
 		q += r.FormValue("age") + `,"`
 		q += r.FormValue("address") + `");`
+		//debug: show sql command
 		//println(q)
-		//return
 		db.Exec(q)
 		defer db.Close()
 		http.Redirect(w, r, "/showPersons", http.StatusFound)
@@ -40,7 +41,7 @@ This is also module that works with forms.
    Add a person
 <form method="post" action="">
    Name    <input type="text" size=16 name="name" value="" autofocus>
-   Age     <input type="text" size=3 name="age" value="">
+   Age     <input type="number" size=3 name="age" min="1" max="100">
    Address <input type="text" size=20 name="address" value="">
            <input type="submit" name="submit" value="Submit"">
 </form>`

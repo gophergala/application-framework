@@ -23,6 +23,8 @@ Run and open http://localhost:8080 in your favorite browser (default user is geo
 Back button is disabled in browser and is nice to run with Google Chrome in app mode
 
          google-chrome --app=http://localhost:8080
+		
+Note that using a HTML5 browser like Chrome you have automatic forms validation.
 
 **Tools used in this project**
 
