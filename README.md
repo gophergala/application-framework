@@ -1,25 +1,17 @@
-###Application Framework
+##Application Framework
 ====
-**About:**
-
-Application Framework is a full modular web application.
+This project is a full modular web application framework.
 Useful when we have or write many applications and we want to concentrate all of them into single application with autentication.
 
 Modularity is based on some go specific caracteristics and modules are plugable at compile time.
 
+Everithing but main.go is a module and have the same structure. You can add or remove any of mod_*.go file and program compile and run flawless (wow!).
+
+Basically, application is a puzzle of modules linked after a rule to give a speed in developing applications.
+
 [![last-version-blue](https://cloud.githubusercontent.com/assets/6298396/5602522/8967405e-935b-11e4-8777-de3623ed6ad7.png)] (https://github.com/gophergala/application-framework/archive/master.zip)
 
-
-**Description:**
-
-Everithing but main.go is a module and have the same structure. You can remove any of mod_*.go file and program compile and run flawless (wow!). You can also add module as you wish. For example if you wish another autenticate module replace only this module.
-Basicaly, application is a puzzle of modules.
-
-I used preformated text because is simpler for this job . But monospace fonts is not so prety. So i use Anonymous Pro (see [templates/style.html](https://github.com/gophergala/application-framework/blob/master/templates/style.html)).
-
-Database used is sqlite (see https://github.com/mattn/go-sqlite3)
-
-**Using:**
+**Using**
 
 Compile program. Se here (https://golang.org/doc/code.html) how.
 
@@ -29,13 +21,13 @@ Back button is disabled in browser and is nice to run with Google Chrome in app 
 
          google-chrome --app=http://localhost:8080
 
-**Tools used in this project:**
+**Tools used in this project**
 
    * compiler http://golang.org
    * ide      https://github.com/visualfc/liteide
    * gopei    https://golang.org/geosoft1/tools for faster development
 
-**How it works:**
+**How it works**
 
 Basicaly, you have a module template and a tehnique to plugin or plugout into
 main application.
@@ -83,6 +75,8 @@ Thats all folks about modules. Now, adding a menu line in [templates/index.html]
 
 make visible ModuleName to application. Remove this line and coresponding module,recompile application and module are removed. Nothing else to do.
 
-Easy copy/paste module or easy modify old modules to do new modules give a speed in developing applications.
+Database used is sqlite (see https://github.com/mattn/go-sqlite3)
+
+I used a nice preformatted text because templates are more clean and readable (see [templates/style.html](https://github.com/gophergala/application-framework/blob/master/templates/style.html))
 
 Of course this things can be do better.
