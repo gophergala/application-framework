@@ -36,7 +36,7 @@ func addPerson(w http.ResponseWriter, r *http.Request) {
 
 		//build page content
 		b = `<pre>
-This is also module that works with forms.
+This is also a module that works with forms.
 
    Add a person
 <form method="post" action="">
