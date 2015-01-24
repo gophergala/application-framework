@@ -12,7 +12,7 @@ Basically, application is a puzzle of modules linked after a rule to give a spee
 Note that included modules do not some useful things but show some techniques to write
 real things and interact with framework and other modules.
 
-![3](https://cloud.githubusercontent.com/assets/6298396/5888312/dcebe376-a402-11e4-9d58-a073c978f9c3.png)
+![8](https://cloud.githubusercontent.com/assets/6298396/5888340/ae14f154-a403-11e4-9c65-a0ab748f6d6c.png)
 
 [![last-version-blue](https://cloud.githubusercontent.com/assets/6298396/5602522/8967405e-935b-11e4-8777-de3623ed6ad7.png)] (https://github.com/gophergala/application-framework/archive/master.zip)
 
