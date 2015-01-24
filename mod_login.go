@@ -24,6 +24,7 @@ func loginPage(w http.ResponseWriter, r *http.Request) {
 				cookie := http.Cookie{Name: "session", Value: r.FormValue("username")}
 				http.SetCookie(w, &cookie)
 				http.Redirect(w, r, "/index", http.StatusFound)
+				println("autenticated.")
 				return
 			}
 		}
