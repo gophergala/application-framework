@@ -9,6 +9,9 @@ Everithing but main.go is a module and have the same structure. You can add or r
 
 Basically, application is a puzzle of modules linked after a rule to give a speed in developing applications.
 
+Note that included modules do not some usefull things but show some tehniques to write
+real things and interact with framework and other modules.
+
 [![last-version-blue](https://cloud.githubusercontent.com/assets/6298396/5602522/8967405e-935b-11e4-8777-de3623ed6ad7.png)] (https://github.com/gophergala/application-framework/archive/master.zip)
 
 **Using**
@@ -80,3 +83,17 @@ Database used is sqlite (see https://github.com/mattn/go-sqlite3)
 I used a nice preformatted text because templates are more clean and readable (see [templates/style.html](https://github.com/gophergala/application-framework/blob/master/templates/style.html))
 
 Of course this things can be do better.
+
+**Included modules**
+
+Minimal modules list (but compile even are removed too):
+- mod_login autenticate user,init session, set cookie, launch mod_index
+- mod_index make main page and show menus
+
+For demo puposes i put some simple modules:
+- mod_checkUser show forms using,search a user in database
+- mod_showPersons show some persons informations from a database
+- mod addPerson add a person into a database and call showPerson module
+- mod_ajax show integration of a simple ajax module who show a clock
+
+** Enjoy! **
