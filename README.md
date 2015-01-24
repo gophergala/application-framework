@@ -3,7 +3,7 @@
 This project is a full modular web application framework.
 Useful when we have or write many applications and we want to concentrate all of them into single application with autentication.
 
-Modularity is based on some go specific caracteristics and modules are plugable at compile time.
+The modularity is based on some go specific characteristics and modules are plugable at compile time.
 
 Everithing but main.go is a module and have the same structure. You can add or remove any of mod_*.go file and program compile and run flawless (wow!).
 
@@ -16,7 +16,7 @@ real things and interact with framework and other modules.
 
 [![last-version-blue](https://cloud.githubusercontent.com/assets/6298396/5602522/8967405e-935b-11e4-8777-de3623ed6ad7.png)] (https://github.com/gophergala/application-framework/archive/master.zip)
 
-**Using**
+**How to use**
 
 Compile program. Se here (https://golang.org/doc/code.html) how.
 
