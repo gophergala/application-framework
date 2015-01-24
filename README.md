@@ -70,7 +70,7 @@ as you see structure are fixed
 
    * cookie checker
    * build page content in b variable
-   * how page with go template
+   * show page with go template
 
 Note that a simple cookie mecanism are used to implement sessions in modules (see [mod_login.go](https://github.com/gophergala/application-framework/blob/master/mod_login.go)).
 Also, module has access to a global logfile with
