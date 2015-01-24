@@ -15,9 +15,9 @@ Modularity is based on some go specific caracteristics and modules are plugable 
 Everithing but main.go is a module and have the same structure. You can remove any of mod_*.go file and program compile and run flawless (wow!). You can also add module as you wish. For example if you wish another autenticate module replace only this module.
 Basicaly, application is a puzzle of modules.
 
-I used preformated text because is simpler for this job . But monospace fonts is not so prety. So i use Anonymous Pro (see templates/style.html).
+I used preformated text because is simpler for this job . But monospace fonts is not so prety. So i use Anonymous Pro (see [templates/style.html](https://github.com/gophergala/application-framework/blob/master/templates/style.html)).
 
-Database used is sqlite (see github.com/mattn/go-sqlite3)
+Database used is sqlite (see https://github.com/mattn/go-sqlite3)
 
 **Using:**
 
