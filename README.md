@@ -36,8 +36,7 @@ Note that using a HTML5 browser like Chrome you have automatic forms validation.
 
 **How it works**
 
-Basicaly, you have a module template and a technique to plugin or plugout into
-main application.
+Basicaly, you have a module template (see [mod_template.go](https://github.com/gophergala/application-framework/blob/master/mod_template.go)) and a technique to plugin or plugout into main application.
 
 init() function make go module plugable. Here we put only the web handler
 
