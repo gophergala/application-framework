@@ -1,7 +1,7 @@
 ##Application Framework
 
 This project is a full modular web application framework.
-Useful when we have or write many applications and we want to concentrate all of them into single application with autentication.
+Useful when we want to put many specific tasks or services in one application with authentication.
 
 The modularity is based on some go specific characteristics and modules are plugable at compile time.
 
