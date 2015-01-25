@@ -1,4 +1,4 @@
-// this is a template module. do nothing. use to start yout application.
+// this is a template module. do nothing. use to start your application.
 package main
 
 import (
