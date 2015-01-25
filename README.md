@@ -36,7 +36,7 @@ Note that using a HTML5 browser like Chrome you have automatic forms validation.
 
 **How it works**
 
-Basicaly, you have a module template and a tehnique to plugin or plugout into
+Basicaly, you have a module template and a technique to plugin or plugout into
 main application.
 
 init() function make go module plugable. Here we put only the web handler
@@ -65,7 +65,7 @@ handler structure
          	t.ExecuteTemplate(w, "index.html", p)
          }
 
-as you see structure are fixed
+as you see the structure are fixed
 
    * cookie checker
    * build page content in b variable
@@ -84,7 +84,7 @@ make visible ModuleName to application. Remove this line and coresponding module
 
 Database used is sqlite (see https://github.com/mattn/go-sqlite3)
 
-I used a nice preformatted text because templates are more clean and readable (see [templates/style.html](https://github.com/gophergala/application-framework/blob/master/templates/style.html))
+I used a nice preformatted text to make templates more readable (see [templates/style.html](https://github.com/gophergala/application-framework/blob/master/templates/style.html))
 
 Of course this things can be do better.
 
