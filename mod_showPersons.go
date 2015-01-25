@@ -16,10 +16,8 @@ func showPersons(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var b string
-
 	//build page content
-	b = `<p>This is a module that show a list of persons from a database`
+	b := `<p>This is a module that show a list of persons from a database`
 
 	db, _ := sql.Open("sqlite3", "./foo.db")
 	defer db.Close()

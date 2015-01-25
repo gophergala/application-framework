@@ -86,8 +86,6 @@ Database used is sqlite (see https://github.com/mattn/go-sqlite3)
 
 I used a nice preformatted text to make templates more readable (see [templates/style.html](https://github.com/gophergala/application-framework/blob/master/templates/style.html))
 
-Of course this things can be do better.
-
 **Included modules**
 
 Minimal modules list (but compile even are removed too):

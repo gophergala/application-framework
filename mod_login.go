@@ -9,6 +9,7 @@ import (
 
 func loginPage(w http.ResponseWriter, r *http.Request) {
 
+	//handle GET/POST methods
 	if r.Method == "POST" {
 		db, _ := sql.Open("sqlite3", "./foo.db")
 		defer db.Close()
@@ -30,6 +31,8 @@ func loginPage(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/", http.StatusFound)
 		return
 	}
+
+	//finally show the page
 	p := Page{
 		Title: "Login",
 	}

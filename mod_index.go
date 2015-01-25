@@ -14,8 +14,9 @@ func indexPage(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	//logout sequence
+	//handle GET/POST methods
 	if r.Method == "GET" {
+		//logout sequence
 		if r.FormValue("logout") == "true" {
 			cookie := http.Cookie{Name: "session", MaxAge: -1}
 			http.SetCookie(w, &cookie)
@@ -25,6 +26,7 @@ func indexPage(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	//build page content
 	b := `<pre>
 	Wellcome to simple applications framework.
 	
@@ -34,8 +36,12 @@ func indexPage(w http.ResponseWriter, r *http.Request) {
 	You are now in index module connected as:
 		` + c.Value + ` from ` + r.Host +
 		`
-		Enjoy!`
+	
+	In the top side you have some demo modules
+	
+	Enjoy!`
 
+	//finally show the page
 	p := Page{
 		Title:  "Index page",
 		Status: c.Value,

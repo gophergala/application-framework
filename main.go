@@ -29,9 +29,9 @@ import (
 var t *template.Template
 
 //standard framework page format
-// page title
-// status field, can keep loged user or other informations
-// body is generate from modules
+//	page title
+//	status field, can keep loged user or other informations
+//	body is generate from modules
 type Page struct {
 	Title, Status string
 	Body          template.HTML
@@ -46,6 +46,9 @@ func main() {
 	os.Remove("./foo.db")
 	db, _ := sql.Open("sqlite3", "./foo.db")
 
+	//some tables
+	//	user table keep application users
+	//	person table is only for demo modules
 	db.Exec(`
 	create table user (id integer not null primary key autoincrement, username text, password text);
 	insert into user (username,password) values ("george","");
@@ -69,5 +72,6 @@ func main() {
 	log.SetOutput(f)
 	log.Println("app started")
 
+	// start web server
 	http.ListenAndServe(":8080", nil)
 }
