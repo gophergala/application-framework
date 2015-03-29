@@ -43,8 +43,8 @@ func init() {
 }
 
 func main() {
-	os.Remove("./foo.db")
-	db, _ := sql.Open("sqlite3", "./foo.db")
+	os.Remove("foo.db")
+	db, _ := sql.Open("sqlite3", "foo.db")
 
 	//some tables
 	//	user table keep application users
