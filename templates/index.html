@@ -3,15 +3,37 @@
 <head>
 <title>{{.Title}}</title>
 {{template "style.html" .}}
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
 <script type="text/javascript">
-    function noBack(){ window.history.forward() }
-    noBack();
-    window.onload=noBack;
-    window.onpageshow=function(evt){
-	     if(evt.persisted)
-	         noBack()
+	$(document).ready(
+	function() {
+		$("input").not( $(":button") ).keypress(
+		function (evt) {
+			if (evt.keyCode == 13) {
+				iname = $(this).val();
+				if (iname !== 'Submit') {
+					var fields = $(this).parents('form:eq(0),body').find('button, input, textarea, select');
+					var index = fields.index( this );
+					if ( index > -1 && ( index + 1 ) < fields.length ) {
+						fields.eq( index + 1 ).focus();
+					}
+					return false;
+				}
+			}
+		});
+    });
+</script>
+
+<script type="text/javascript">
+	function noBack(){ window.history.forward() }
+	noBack();
+	window.onload=noBack;
+	window.onpageshow=function(evt){
+		if(evt.persisted)
+		noBack()
 	}
-    window.onunload=function(){ void(0) }
+	window.onunload=function(){ void(0) }
 </script>
 </head>
 <body>
