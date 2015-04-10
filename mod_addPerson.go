@@ -43,7 +43,7 @@ This is also a module that works with forms.
    Name    <input type="text" size=16 name="name" value="" autofocus>
    Age     <input type="number" size=3 name="age" min="1" max="100">
    Address <input type="text" size=20 name="address" value="">
-           <input type="submit" name="submit" value="Submit"">
+           <input type="submit" name="submit" value="Submit">
 </form>`
 	}
 
